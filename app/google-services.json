@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "358232591726",
+    "firebase_url": "https://cinemateca-b6db2.firebaseio.com",
+    "project_id": "cinemateca-b6db2",
+    "storage_bucket": "cinemateca-b6db2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358232591726:android:37ca74168afdb929",
+        "android_client_info": {
+          "package_name": "com.xiberty.cinemateca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358232591726-r33vjodu3jbc35eb2gt2tg2b35rpan9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZEI4MPpUgMubgHUJYFeseyQCzNcGo2mY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

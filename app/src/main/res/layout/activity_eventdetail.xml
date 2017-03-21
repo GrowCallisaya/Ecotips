@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_detail"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.xiberty.cinemateca.DetailActivity">
+
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapse_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+        app:contentScrim="@color/accent">
+
+        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/imagen_extendida"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/header"
+            android:transitionName="@string/nombre_transicion_imagen"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="parallax"
+            app:titleTextColor="@color/md_white_1000"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitleTextColor="@color/md_white_1000"/>
+
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+</android.support.design.widget.AppBarLayout>
+
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+        <ImageView
+            android:id="@+id/event_image_small"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:src="@drawable/peli3"
+            android:scaleType="centerCrop"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            />
+        <TextView
+            android:id="@+id/new_text_date"
+            android:text="la fecha es: 12 Noviembre 2015"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/event_image_small"
+            android:textColor="#fff"
+            android:background="@color/cardview_dark_background"
+            android:padding="7dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/new_text_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Event Title if Cinemateca"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_toRightOf="@id/event_image_small"
+            android:layout_below="@id/new_text_date"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:id="@+id/tag"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tag"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@id/event_image_small"
+            android:layout_below="@id/new_text_title"/>
+        <TextView
+            android:id="@+id/new_text_author"
+            android:text="30 Bs"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:layout_toRightOf="@id/tag"
+            android:layout_below="@id/new_text_title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc"
+            android:layout_below="@id/event_image_small"
+            android:id="@+id/line"
+            />
+        <TextView
+            android:id="@+id/new_text_description_subtitle"
+            android:text="Descripción"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_below="@+id/line"
+            android:paddingBottom="7dp"/>
+
+        <WebView
+            android:id="@+id/new_text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_text_description_subtitle">
+
+        </WebView>
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

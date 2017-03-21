@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    >
+
+    <ImageView
+        android:id="@+id/event_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:transitionName="@string/nombre_transicion_imagen" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        />
+    <TextView
+        android:id="@+id/event_title"
+        android:text="evento"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:padding="16dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/event_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textSize="10dp"
+        android:textStyle="italic"
+        android:textAllCaps="true"
+        android:layout_gravity="bottom"
+        android:gravity="right"
+        android:text="hola"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@android:color/white" />
+
+</FrameLayout>
