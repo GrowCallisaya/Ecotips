@@ -21,7 +21,7 @@ public class HomeFragment extends Fragment {
     public static int FEED_BILLDBOARD = 0;
     private SparseArray<PageItem> pages = new SparseArray<PageItem>();
     private NoticeFragment noticeFragment = new NoticeFragment();
-    private BillboardFragment billboardFragment = new BillboardFragment();
+    private ProductFragment productFragment = new ProductFragment();
 
     public HomeFragment() {
     }
@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
 
         if(savedInstanceState == null){
                 pages.append(HomeFragment.FEED_NOTICE,new PageItem(noticeFragment,"NOTICIAS"));
-                pages.append(HomeFragment.FEED_BILLDBOARD,new PageItem(billboardFragment,"CARTELERA"));
+                pages.append(HomeFragment.FEED_BILLDBOARD,new PageItem(productFragment,"CARTELERA"));
                 PageAdapter pagerAdapter  =   new PageAdapter(pages,getChildFragmentManager());
                 TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
                 mViewPager = (ViewPager) view.findViewById(R.id.pager);

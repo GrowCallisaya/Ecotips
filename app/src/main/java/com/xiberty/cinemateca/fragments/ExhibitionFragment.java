@@ -49,7 +49,7 @@ public class ExhibitionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_billboard, container, false);
+        rootView = inflater.inflate(R.layout.fragment_products, container, false);
             circular = ProgressDialog.show(rootView.getContext(), "Cargando", "Aguarde un momento...", true);
             circular.setProgress(R.color.colorPrimaryDark);
         //Firebase

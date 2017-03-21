@@ -17,6 +17,7 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 import com.xiberty.cinemateca.fragments.HomeFragment;
+import com.xiberty.cinemateca.fragments.ProductFragment;
 import com.xiberty.cinemateca.fragments.WebFragment;
 
 import android.view.View;
@@ -24,8 +25,8 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     public enum Menues {
         HOME(1),
-        PRESENTATION(2),
-        SERVICE(3),
+        PRODUCTS(2),
+        CATEGORIES(3),
         ABOUT(5);
 
         public int id;
@@ -107,13 +108,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void showMenu(long identifier){
         if (identifier==Menues.HOME.getID()) {
-            setContainer(new HomeFragment());
+            setContainer(new ProductFragment());
 
-        } else if(identifier==Menues.PRESENTATION.getID()){
-            setContainer(WebFragment.newInstance("presentation"));
+        } else if(identifier==Menues.PRODUCTS.getID()){
+            setContainer(WebFragment.newInstance("products"));
 
-        } else if(identifier==Menues.SERVICE.getID()){
-            setContainer(WebFragment.newInstance("service"));
+        } else if(identifier==Menues.CATEGORIES.getID()){
+            setContainer(WebFragment.newInstance("categories"));
 
         }else if(identifier==Menues.ABOUT.getID()){
             setContainer(WebFragment.newInstance("about"));

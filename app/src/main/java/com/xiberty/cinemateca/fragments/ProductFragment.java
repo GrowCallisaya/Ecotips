@@ -1,18 +1,9 @@
 package com.xiberty.cinemateca.fragments;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,20 +17,17 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
-import com.xiberty.cinemateca.DetailActivity;
 import com.xiberty.cinemateca.EventDetailActivity;
-import com.xiberty.cinemateca.MainActivity;
 import com.xiberty.cinemateca.R;
 import com.xiberty.cinemateca.adapters.BillboardAdapter;
 import com.xiberty.cinemateca.model.Event;
-import com.xiberty.cinemateca.model.Notice;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 
-public class BillboardFragment extends Fragment {
+public class ProductFragment extends Fragment {
     private GridView gridView;
     private BillboardAdapter adaptador;
     private List<Event> items = new ArrayList<>();
@@ -54,14 +42,14 @@ public class BillboardFragment extends Fragment {
     private String imageEvent;
     private int c=0;
 
-    public BillboardFragment() {
+    public ProductFragment() {
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_billboard, container, false);
+        rootView = inflater.inflate(R.layout.fragment_products, container, false);
             circular = ProgressDialog.show(rootView.getContext(), "Cargando", "Aguarde un momento...", true);
             circular.setProgress(R.color.colorPrimaryDark);
         //Firebase
