@@ -12,6 +12,7 @@ import android.widget.GridView;
 import com.google.gson.Gson;
 import com.xiberty.cinemateca.ProductDetailActivity;
 import com.xiberty.cinemateca.R;
+import com.xiberty.cinemateca.adapters.CategoryAdapter;
 import com.xiberty.cinemateca.adapters.ProductAdapter;
 import com.xiberty.cinemateca.model.Product;
 
@@ -19,21 +20,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ProductFragment extends Fragment {
+public class CategoryFragment extends Fragment {
     private GridView gridView;
-    private ProductAdapter adaptador;
+    private CategoryAdapter adaptador;
     private List<Product> items = new ArrayList<>();
     private View rootView;
     private int c=0;
 
-    public ProductFragment() {
+    public CategoryFragment() {
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_products, container, false);
+        rootView = inflater.inflate(R.layout.fragment_categories, container, false);
 
         return rootView;
     }
@@ -57,7 +58,7 @@ public class ProductFragment extends Fragment {
 
     private void usarGridView() {
         gridView = (GridView) rootView.findViewById(R.id.grid);
-        adaptador = new ProductAdapter(getActivity(), items);
+        adaptador = new CategoryAdapter(getActivity(), items);
         gridView.setAdapter(adaptador);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

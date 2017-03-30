@@ -21,7 +21,7 @@
         <activity
             android:name=".DetailActivity"
             android:configChanges="screenSize|orientation" />
-        <activity android:name=".EventDetailActivity" />
+        <activity android:name=".ProductDetailActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

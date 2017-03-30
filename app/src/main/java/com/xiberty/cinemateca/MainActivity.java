@@ -16,6 +16,7 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
+import com.xiberty.cinemateca.fragments.CategoryFragment;
 import com.xiberty.cinemateca.fragments.HomeFragment;
 import com.xiberty.cinemateca.fragments.ProductFragment;
 import com.xiberty.cinemateca.fragments.WebFragment;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         final ActionBar ab = getSupportActionBar();
         if (ab != null) {
             // Poner ícono del drawer toggle
-            ab.setHomeAsUpIndicator(R.mipmap.cinemateca_mdpi);
+            ab.setHomeAsUpIndicator(R.drawable.prod7);
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         // Create the AccountHeader
         AccountHeader accountHeader = new AccountHeaderBuilder()
                 .withActivity(this)
-                .withHeaderBackground(R.drawable.header)
+                .withHeaderBackground(R.drawable.ecotipsbanner)
                 .build();
 
         //Now create your drawewr and pass the AccountHeader.Result
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             setContainer(new ProductFragment());
 
         } else if(identifier==Menues.PRODUCTS.getID()){
-            setContainer(WebFragment.newInstance("products"));
+            setContainer(new CategoryFragment());
 
         } else if(identifier==Menues.CATEGORIES.getID()){
             setContainer(WebFragment.newInstance("categories"));

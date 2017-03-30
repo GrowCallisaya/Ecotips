@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.xiberty.cinemateca.R;
 import com.xiberty.cinemateca.model.Event;
 import com.xiberty.cinemateca.model.Fecha;
+import com.xiberty.cinemateca.model.Product;
 
 import java.util.List;
 
@@ -20,11 +21,11 @@ import java.util.List;
  * Created by growcallisaya on 9/3/17.
  */
 
-public class BillboardAdapter extends BaseAdapter {
+public class ProductAdapter extends BaseAdapter {
     private Context context;
-    List<Event> items;
+    List<Product> items;
 
-    public BillboardAdapter(Context context, List<Event> items) {
+    public ProductAdapter(Context context, List<Product> items) {
         this.context = context;
         this.items = items;
     }
@@ -62,13 +63,12 @@ public class BillboardAdapter extends BaseAdapter {
 
 
 
-        final Event item = items.get(position);
+        final Product item = items.get(position);
         Glide.with(event_image.getContext())
                 .load(item.getImage())
                 .into(event_image);
-        event_title.setText(item.getTitle());
-        Fecha f= new Fecha(item.getDate());
-        event_date.setText(f.getFormatDate());
+        event_title.setText(item.getName());
+        event_date.setText(item.getVotes()+"");
 
         return view;
     }

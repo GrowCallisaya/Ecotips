@@ -25,7 +25,7 @@ tools:context="com.xiberty.cinemateca.DetailActivity">
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/header"
+            android:src="@drawable/prod6"
             android:transitionName="@string/nombre_transicion_imagen"/>
 
         <android.support.v7.widget.Toolbar
