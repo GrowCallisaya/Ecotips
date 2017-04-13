@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca.adapters;
+package com.xiberty.ecotips.adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.xiberty.cinemateca.R;
-import com.xiberty.cinemateca.model.Product;
+import com.xiberty.ecotips.R;
+import com.xiberty.ecotips.model.Product;
 
 import java.util.List;
 

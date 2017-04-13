@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="250dp"
     >
 
     <ImageView
@@ -44,23 +44,27 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:textColor="@android:color/white" />
 
-
-    <Button
-        android:id="@+id/btn_vermas"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#47daad"
-        android:text="@string/vermas"
-        android:textColor="@color/md_white_1000"
-        android:textStyle="bold"
-        android:layout_gravity="bottom"
-        />
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn_vermas"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#47daad"
+            android:text="@string/vermas"
+            android:textColor="@color/md_white_1000"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="40dp"/>
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_vermas"
+            />
+    </RelativeLayout>
+
 
 </FrameLayout>

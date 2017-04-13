@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca.model;
+package com.xiberty.ecotips.model;
 
 /**
  * Created by growcallisaya on 14/3/17.

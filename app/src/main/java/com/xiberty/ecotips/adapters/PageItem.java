@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca.adapters;
+package com.xiberty.ecotips.adapters;
 
 
 import android.support.v4.app.Fragment;

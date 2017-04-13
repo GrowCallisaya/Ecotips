@@ -1,24 +1,22 @@
-package com.xiberty.cinemateca.model;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+package com.xiberty.ecotips.model;
 
 /**
  * Created by growcallisaya on 9/3/17.
  */
-public class Notice {
+public class Event {
     private String image;
     private String title;
     private String author;
     private String date;
     private String description;
 
-    public Notice(String image, String title, String author, String date, String description) {
+    public Event(String image, String title, String author, String date, String description) {
         this.image = image;
         this.title = title;
         this.author = author;
         this.date = date;
         this.description = description;
+
     }
 
     public String getImage() {
@@ -61,5 +59,8 @@ public class Notice {
         this.description = description;
     }
 
+    public int getId() {
+        return title.hashCode();
+    }
 
 }

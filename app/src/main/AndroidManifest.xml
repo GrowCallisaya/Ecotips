@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xiberty.cinemateca"
-    >
+    package="com.xiberty.ecotips">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
         android:configChanges="orientation|screenSize"
         android:icon="@mipmap/logo_ecotips"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:screenOrientation="portrait"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|screenSize">
-        </activity>
+            android:name="com.xiberty.ecotips.MainActivity"
+            android:configChanges="orientation|screenSize"></activity>
         <activity
-            android:name=".DetailActivity"
+            android:name="com.xiberty.ecotips.DetailActivity"
             android:configChanges="screenSize|orientation" />
-        <activity android:name=".ProductDetailActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.xiberty.ecotips.ProductDetailActivity" />
+        <activity
+            android:name="com.xiberty.ecotips.LoginActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity android:name="com.xiberty.ecotips.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
     </application>

@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca;
+package com.xiberty.ecotips;
 
 import android.content.Intent;
 import android.graphics.PixelFormat;
@@ -8,7 +8,6 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 public class SplashActivity extends AppCompatActivity {
@@ -53,7 +52,7 @@ public class SplashActivity extends AppCompatActivity {
                         waited += 100;
                     }
                     Intent intent = new Intent(SplashActivity.this,
-                            MainActivity.class);
+                            LoginActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     SplashActivity.this.finish();

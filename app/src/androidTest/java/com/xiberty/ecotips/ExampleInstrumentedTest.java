@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca;
+package com.xiberty.ecotips;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

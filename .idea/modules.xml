@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Cinemateca.iml" filepath="$PROJECT_DIR$/Cinemateca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ecotips.iml" filepath="$PROJECT_DIR$/Ecotips.iml" />
       <module fileurl="file://$PROJECT_DIR$/EcotipsAndroid.iml" filepath="$PROJECT_DIR$/EcotipsAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

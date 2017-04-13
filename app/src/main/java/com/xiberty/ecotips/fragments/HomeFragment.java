@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca.fragments;
+package com.xiberty.ecotips.fragments;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -9,9 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.xiberty.cinemateca.R;
-import com.xiberty.cinemateca.adapters.PageAdapter;
-import com.xiberty.cinemateca.adapters.PageItem;
+import com.xiberty.ecotips.R;
+import com.xiberty.ecotips.adapters.PageAdapter;
+import com.xiberty.ecotips.adapters.PageItem;
 
 
 public class HomeFragment extends Fragment {

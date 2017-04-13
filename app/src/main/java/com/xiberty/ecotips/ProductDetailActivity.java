@@ -1,24 +1,20 @@
-package com.xiberty.cinemateca;
+package com.xiberty.ecotips;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.xiberty.cinemateca.model.Fecha;
-import com.xiberty.cinemateca.model.Event;
-import com.xiberty.cinemateca.model.Product;
+import com.xiberty.ecotips.model.Product;
 
 public class ProductDetailActivity extends AppCompatActivity {
 

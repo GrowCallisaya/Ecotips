@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca.fragments;
+package com.xiberty.ecotips.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +10,10 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.google.gson.Gson;
-import com.xiberty.cinemateca.ProductDetailActivity;
-import com.xiberty.cinemateca.R;
-import com.xiberty.cinemateca.adapters.CategoryAdapter;
-import com.xiberty.cinemateca.adapters.ProductAdapter;
-import com.xiberty.cinemateca.model.Product;
+import com.xiberty.ecotips.ProductDetailActivity;
+import com.xiberty.ecotips.R;
+import com.xiberty.ecotips.adapters.CategoryAdapter;
+import com.xiberty.ecotips.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;

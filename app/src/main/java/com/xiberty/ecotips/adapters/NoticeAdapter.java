@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca.adapters;
+package com.xiberty.ecotips.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -11,13 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
-import com.xiberty.cinemateca.DetailActivity;
-import com.xiberty.cinemateca.model.Fecha;
-import com.xiberty.cinemateca.model.Notice;
-import com.xiberty.cinemateca.R;
+import com.xiberty.ecotips.DetailActivity;
+import com.xiberty.ecotips.model.Fecha;
+import com.xiberty.ecotips.model.Notice;
+import com.xiberty.ecotips.R;
 
 import java.util.List;
 

@@ -1,6 +1,5 @@
-package com.xiberty.cinemateca;
+package com.xiberty.ecotips;
 
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
@@ -16,10 +15,9 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
-import com.xiberty.cinemateca.fragments.CategoryFragment;
-import com.xiberty.cinemateca.fragments.HomeFragment;
-import com.xiberty.cinemateca.fragments.ProductFragment;
-import com.xiberty.cinemateca.fragments.WebFragment;
+import com.xiberty.ecotips.fragments.CategoryFragment;
+import com.xiberty.ecotips.fragments.ProductFragment;
+import com.xiberty.ecotips.fragments.WebFragment;
 
 import android.view.View;
 
@@ -66,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         //Items
 
         PrimaryDrawerItem item_home = new PrimaryDrawerItem().withIdentifier(1).withIcon(FontAwesome.Icon.faw_home).withName("Inicio");
-        PrimaryDrawerItem item_presentation = new PrimaryDrawerItem().withIdentifier(2).withIcon(FontAwesome.Icon.faw_inbox).withName("Presentación");
-        PrimaryDrawerItem item_service= new PrimaryDrawerItem().withIdentifier(3).withIcon(FontAwesome.Icon.faw_building).withName("Servicios");
-        PrimaryDrawerItem item_about= new PrimaryDrawerItem().withIdentifier(5).withIcon(FontAwesome.Icon.faw_info).withName("Acerca de");
+        PrimaryDrawerItem item_presentation = new PrimaryDrawerItem().withIdentifier(2).withIcon(FontAwesome.Icon.faw_inbox).withName("Productos");
+        PrimaryDrawerItem item_service= new PrimaryDrawerItem().withIdentifier(3).withIcon(FontAwesome.Icon.faw_building).withName("Categorias");
+        PrimaryDrawerItem item_about= new PrimaryDrawerItem().withIdentifier(5).withIcon(FontAwesome.Icon.faw_info).withName("Favoritos");
 
         // Create the AccountHeader
         AccountHeader accountHeader = new AccountHeaderBuilder()

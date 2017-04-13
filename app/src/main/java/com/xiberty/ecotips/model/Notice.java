@@ -1,25 +1,21 @@
-package com.xiberty.cinemateca.model;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.xiberty.ecotips.model;
 
 /**
  * Created by growcallisaya on 9/3/17.
  */
-public class Event {
+public class Notice {
     private String image;
     private String title;
     private String author;
     private String date;
     private String description;
 
-    public Event(String image, String title, String author, String date, String description) {
+    public Notice(String image, String title, String author, String date, String description) {
         this.image = image;
         this.title = title;
         this.author = author;
         this.date = date;
         this.description = description;
-
     }
 
     public String getImage() {
@@ -62,8 +58,5 @@ public class Event {
         this.description = description;
     }
 
-    public int getId() {
-        return title.hashCode();
-    }
 
 }

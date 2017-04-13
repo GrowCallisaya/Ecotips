@@ -1,7 +1,5 @@
-package com.xiberty.cinemateca.fragments;
+package com.xiberty.ecotips.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import com.xiberty.cinemateca.R;
+import com.xiberty.ecotips.R;
 
 public class WebFragment extends Fragment {
 

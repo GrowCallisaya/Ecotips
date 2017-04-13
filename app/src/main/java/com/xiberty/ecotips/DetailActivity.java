@@ -1,4 +1,4 @@
-package com.xiberty.cinemateca;
+package com.xiberty.ecotips;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.xiberty.cinemateca.model.Fecha;
-import com.xiberty.cinemateca.model.Notice;
+import com.xiberty.ecotips.model.Fecha;
+import com.xiberty.ecotips.model.Notice;
 
 public class DetailActivity extends AppCompatActivity {
 
