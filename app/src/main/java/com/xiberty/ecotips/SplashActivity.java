@@ -51,9 +51,8 @@ public class SplashActivity extends AppCompatActivity {
                         sleep(100);
                         waited += 100;
                     }
-                    Intent intent = new Intent(SplashActivity.this,
-                            LoginActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     startActivity(intent);
                     SplashActivity.this.finish();
                 } catch (InterruptedException e) {

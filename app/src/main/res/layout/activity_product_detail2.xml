@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_detail"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.xiberty.ecotips.DetailActivity">
+
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapse_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:contentScrim="@color/accent">
+
+        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/imagen_extendida"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/prod6"
+            android:transitionName="@string/nombre_transicion_imagen"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="parallax"
+            app:titleTextColor="@color/md_white_1000"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitleTextColor="@color/md_white_1000"/>
+
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+</android.support.design.widget.AppBarLayout>
+
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/new_text_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Ecotips' Product Name"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Ingredientes"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_gravity="center"
+            android:background="#47daad"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/header"
+                android:layout_margin="10dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/header"
+                android:layout_margin="10dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/header"
+                android:layout_margin="10dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/header"
+                android:layout_margin="10dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/header"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Preparación"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_gravity="center"
+            android:background="#47daad"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"/>
+        <TextView
+            android:id="@+id/text_receta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/lorem_ipsum"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

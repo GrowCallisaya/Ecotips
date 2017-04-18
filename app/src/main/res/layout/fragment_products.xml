@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
     tools:context="com.xiberty.ecotips.fragments.NoticeFragment">
 
     <GridView
@@ -9,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnWidth="100dp"
-        android:horizontalSpacing="0dp"
-        android:verticalSpacing="0dp"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
         android:numColumns="auto_fit"
         android:padding="0dp" />
 

@@ -1,5 +1,6 @@
 package com.xiberty.ecotips;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
@@ -7,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.facebook.AccessToken;
+import com.facebook.login.LoginManager;
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -22,30 +25,19 @@ import com.xiberty.ecotips.fragments.WebFragment;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-    public enum Menues {
-        HOME(1),
-        PRODUCTS(2),
-        CATEGORIES(3),
-        ABOUT(5);
 
-        public int id;
-
-        private Menues(int id) {
-            this.id = id;
-        }
-
-        public long getID() {
-            return (long) this.id;
-        }
-    }
 
     public Drawer drawer;
     public  Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setupToolbar(); //Adding Toolbar & Navigation Drawer
+        if (isLoggedIn())
+            setupToolbar(); //Adding Toolbar & Navigation Drawer
+        else
+            startActivity(new Intent(MainActivity.this,LoginActivity.class));
     }
 
     /**
@@ -67,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         PrimaryDrawerItem item_presentation = new PrimaryDrawerItem().withIdentifier(2).withIcon(FontAwesome.Icon.faw_inbox).withName("Productos");
         PrimaryDrawerItem item_service= new PrimaryDrawerItem().withIdentifier(3).withIcon(FontAwesome.Icon.faw_building).withName("Categorias");
         PrimaryDrawerItem item_about= new PrimaryDrawerItem().withIdentifier(5).withIcon(FontAwesome.Icon.faw_info).withName("Favoritos");
+        PrimaryDrawerItem item_exit= new PrimaryDrawerItem().withIdentifier(6).withIcon(FontAwesome.Icon.faw_window_close).withName("Salir");
 
         // Create the AccountHeader
         AccountHeader accountHeader = new AccountHeaderBuilder()
@@ -83,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 .addDrawerItems(item_home,
                         item_presentation,
                         item_service,
-                        item_about)
+                        item_about,item_exit)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
 
                      @Override
@@ -118,12 +111,42 @@ public class MainActivity extends AppCompatActivity {
         }else if(identifier==Menues.ABOUT.getID()){
             setContainer(WebFragment.newInstance("about"));
         }
+        else if(identifier==Menues.EXIT.getID()){
+            LoginManager.getInstance().logOut();
+            Intent i = new Intent(MainActivity.this,LoginActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(i);
+            MainActivity.this.finish();
+        }
 
     }
+    public enum Menues {
+        HOME(1),
+        PRODUCTS(2),
+        CATEGORIES(3),
+        ABOUT(5),
+        EXIT(6);
+
+        public int id;
+
+        private Menues(int id) {
+            this.id = id;
+        }
+
+        public long getID() {
+            return (long) this.id;
+        }
+    }
+
 
     public void setContainer(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commitAllowingStateLoss();
+    }
+
+    public boolean isLoggedIn() {
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        return accessToken != null;
     }
 
 }
