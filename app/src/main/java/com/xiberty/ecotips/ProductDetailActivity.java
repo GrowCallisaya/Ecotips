@@ -32,18 +32,17 @@ public class ProductDetailActivity extends AppCompatActivity {
 
 //        product_image = (ImageView) findViewById(R.id.event_image_small);
         product_image_extended = (ImageView) findViewById(R.id.imagen_extendida);
-//        TextView event_title = (TextView) findViewById(R.id.new_text_title);
+        TextView product_title = (TextView) findViewById(R.id.new_text_title);
 //        TextView event_author = (TextView) findViewById(R.id.new_text_author);
 //        TextView event_date = (TextView) findViewById(R.id.new_text_date);
-//        event_title.setText(product.getName());
+        product_title.setText(product.getName());
 //        event_author.setText(product.getIngredients());
 //        event_date.setText(product.getVotes()+"");
 
         //Changing fonts
-//        Typeface myTypeface = Typeface.createFromAsset(this.getAssets(), "fonts/Raleway-Bold.ttf");
-//        Typeface myTypeface2 = Typeface.createFromAsset(this.getAssets(), "fonts/Raleway-Regular.ttf");
-//        event_title.setTypeface(myTypeface);
-//        event_date.setTypeface(myTypeface);
+        Typeface myTypeface = Typeface.createFromAsset(this.getAssets(), "fonts/Raleway-Bold.ttf");
+         product_title.setTypeface(myTypeface);
+ //        event_date.setTypeface(myTypeface);
 //        event_author.setTypeface(myTypeface2);
 
 

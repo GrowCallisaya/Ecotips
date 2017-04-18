@@ -90,27 +90,32 @@ tools:context="com.xiberty.ecotips.DetailActivity">
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/header"
+                android:src="@drawable/in1"
+                android:scaleType="centerCrop"
                 android:layout_margin="10dp"/>
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/header"
+                android:src="@drawable/in2"
+                android:scaleType="centerCrop"
                 android:layout_margin="10dp"/>
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/header"
+                android:src="@drawable/in3"
+                android:scaleType="centerCrop"
                 android:layout_margin="10dp"/>
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/header"
+                android:src="@drawable/in4"
+                android:scaleType="centerCrop"
                 android:layout_margin="10dp"/>
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/header"
+                android:src="@drawable/in5"
+                android:scaleType="centerCrop"
                 android:layout_margin="10dp"/>
         </LinearLayout>
         <TextView
