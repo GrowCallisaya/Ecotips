@@ -26,6 +26,7 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
     public final static class IngredientViewHolder  extends RecyclerView.ViewHolder{
         public ImageView ivImagen;
         public TextView tvName;
+        public TextView tvNutritionalValue;
 
         public IngredientViewHolder(View v) {
             super(v);
@@ -62,7 +63,7 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
         holder.ivImagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar snackbar = Snackbar.make(v, "ES", Snackbar.LENGTH_LONG);
+                Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_LONG);
                 // Get the Snackbar's layout view
                 Snackbar.SnackbarLayout layout = (Snackbar.SnackbarLayout) snackbar.getView();
                 layout.setBackgroundColor(Color.rgb(71,218,173));
@@ -76,13 +77,17 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
                 View snackView = inflater.inflate(R.layout.my_snackbar, null);
 
                 // Configure the view
-                ImageView imageView = (ImageView) snackView.findViewById(R.id.ingredient_image);
-                TextView textViewTop = (TextView) snackView.findViewById(R.id.ingredient_name);
-                Glide.with(imageView.getContext())
+                ImageView ivIngredient = (ImageView) snackView.findViewById(R.id.ingredient_image);
+                TextView tvNameIngredient = (TextView) snackView.findViewById(R.id.ingredient_name);
+                TextView tvValueIngredient= (TextView) snackView.findViewById(R.id.ingredient_value);
+
+                Glide.with(ivIngredient.getContext())
                         .load(items.get(position).getImage())
-                        .into(imageView);
-                textViewTop.setText(items.get(position).getName());
-                textViewTop.setTextColor(Color.WHITE);
+                        .into(ivIngredient);
+                tvNameIngredient.setText(items.get(position).getName());
+                tvNameIngredient.setTextColor(Color.WHITE);
+                tvValueIngredient.setText(items.get(position).getNutricional_value());
+                tvValueIngredient.setTextColor(Color.WHITE);
 
                 // Add the view to the Snackbar's layout
                 layout.addView(snackView, 0);

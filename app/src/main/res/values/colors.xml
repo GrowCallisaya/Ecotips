@@ -7,4 +7,6 @@
 
     <color name="tab_background_selected">#ffffff</color>
     <color name="tab_background_unselected">#ffffff</color>
+    <color name="colorOrange">#F5A64A</color>
+    <color name="colorSky">#47daad</color>
 </resources>

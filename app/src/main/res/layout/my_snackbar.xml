@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="10dp"
-    android:background="#47daad"
+    android:background="@color/colorSky"
     >
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -18,7 +18,28 @@
             android:id="@+id/ingredient_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:paddingLeft="20dp"
+            android:layout_toRightOf="@id/ingredient_image"
+            android:layout_centerVertical="true"
             android:text="ingrediente"/>
-</LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle"
+            android:layout_alignParentRight="true"
+            >
+
+                <TextView
+                    android:id="@+id/ingredient_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="100%"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_white_1000"/>
+
+        </RelativeLayout>
+</RelativeLayout>
