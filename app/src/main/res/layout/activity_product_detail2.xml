@@ -82,42 +82,15 @@ tools:context="com.xiberty.ecotips.DetailActivity">
             android:paddingTop="3dp"
             android:paddingBottom="3dp"/>
 
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/reciclador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/in1"
-                android:scaleType="centerCrop"
-                android:layout_margin="10dp"/>
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/in2"
-                android:scaleType="centerCrop"
-                android:layout_margin="10dp"/>
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/in3"
-                android:scaleType="centerCrop"
-                android:layout_margin="10dp"/>
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/in4"
-                android:scaleType="centerCrop"
-                android:layout_margin="10dp"/>
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/in5"
-                android:scaleType="centerCrop"
-                android:layout_margin="10dp"/>
-        </LinearLayout>
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:scrollbars="vertical" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,7 +105,7 @@ tools:context="com.xiberty.ecotips.DetailActivity">
             android:paddingTop="3dp"
             android:paddingBottom="3dp"/>
         <TextView
-            android:id="@+id/text_receta"
+            android:id="@+id/txt_receta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

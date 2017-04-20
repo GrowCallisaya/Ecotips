@@ -1,5 +1,7 @@
 package com.xiberty.ecotips.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by growcallisaya on 21/3/17.
  */
@@ -7,16 +9,16 @@ package com.xiberty.ecotips.model;
 public class Product {
 
     private String name;
-    private String ingredients;
-    private String nutricional_value;
+    private ArrayList<Ingredient> ingredients;
+    private String recet;
     private int votes;
     private String image;
 
-    public Product(String image,String name, String ingredients, String nutricional_value, int votes) {
+    public Product(String image,String name, ArrayList<Ingredient> ingredients, String recet, int votes) {
         this.image = image;
         this.name = name;
         this.ingredients = ingredients;
-        this.nutricional_value = nutricional_value;
+        this.recet = recet;
         this.votes = votes;
     }
 
@@ -36,20 +38,20 @@ public class Product {
         this.name = name;
     }
 
-    public String getIngredients() {
+    public ArrayList<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String ingredients) {
+    public void setIngredients(ArrayList<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 
-    public String getNutricional_value() {
-        return nutricional_value;
+    public String getRecet() {
+        return recet;
     }
 
-    public void setNutricional_value(String nutricional_value) {
-        this.nutricional_value = nutricional_value;
+    public void setRecet(String recet) {
+        this.recet = recet;
     }
 
     public int getVotes() {

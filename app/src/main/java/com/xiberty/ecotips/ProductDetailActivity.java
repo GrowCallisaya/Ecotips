@@ -7,19 +7,29 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
+import com.xiberty.ecotips.adapters.IngredientAdapter;
+import com.xiberty.ecotips.model.Ingredient;
 import com.xiberty.ecotips.model.Product;
+
+import java.util.ArrayList;
 
 public class ProductDetailActivity extends AppCompatActivity {
 
-    private ImageView product_image;
-    private ImageView product_image_extended;
+    private ImageView ivImageExtended;
+    private TextView tvReceta;
+
     private Product product;
+    private RecyclerView recycler;
+    private LinearLayoutManager lManager;
+    private IngredientAdapter mIngredientAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,32 +40,40 @@ public class ProductDetailActivity extends AppCompatActivity {
         Gson gson = new Gson();
         product =  gson.fromJson(item, Product.class);
 
-//        product_image = (ImageView) findViewById(R.id.event_image_small);
-        product_image_extended = (ImageView) findViewById(R.id.imagen_extendida);
+        ivImageExtended = (ImageView) findViewById(R.id.imagen_extendida);
         TextView product_title = (TextView) findViewById(R.id.new_text_title);
-//        TextView event_author = (TextView) findViewById(R.id.new_text_author);
-//        TextView event_date = (TextView) findViewById(R.id.new_text_date);
-        product_title.setText(product.getName());
-//        event_author.setText(product.getIngredients());
-//        event_date.setText(product.getVotes()+"");
+        tvReceta= (TextView) findViewById(R.id.txt_receta);
 
+        product_title.setText(product.getName());
+        tvReceta.setText(product.getRecet());
         //Changing fonts
         Typeface myTypeface = Typeface.createFromAsset(this.getAssets(), "fonts/Raleway-Bold.ttf");
          product_title.setTypeface(myTypeface);
- //        event_date.setTypeface(myTypeface);
-//        event_author.setTypeface(myTypeface2);
 
-
-        //Mostrar Imagen Detallada
-//        Glide.with(product_image.getContext())
-//                .load(product.getImage())
-//                .into(product_image);
 
         //Mostrar imagen en Collapsing
         Glide.with(this)
                 .load(product.getImage())
-                .into(product_image_extended);
+                .into(ivImageExtended);
 
+        //Obtener el Reclycler
+        recycler = (RecyclerView) findViewById(R.id.reciclador);
+        recycler.setHasFixedSize(true);
+
+        // Usar un administrador para LinearLayout
+        lManager = new LinearLayoutManager(this);
+        lManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recycler.setLayoutManager(lManager);
+
+
+        //TODO Lista FAKE
+
+
+        ArrayList<Ingredient> ingredients = new ArrayList<>();
+        ingredients = product.getIngredients();
+        //Crear un nuevo adaptador
+        mIngredientAdapter = new IngredientAdapter(ingredients);
+        recycler.setAdapter(mIngredientAdapter);
 
         final Toolbar toolbar  = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
