@@ -13,6 +13,7 @@ public class Product {
     private String recet;
     private int votes;
     private String image;
+        
 
     public Product(String image,String name, ArrayList<Ingredient> ingredients, String recet, int votes) {
         this.image = image;
