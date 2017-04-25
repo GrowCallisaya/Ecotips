@@ -13,14 +13,15 @@ public class Product {
     private String recet;
     private int votes;
     private String image;
-        
+    private int categories;
 
-    public Product(String image,String name, ArrayList<Ingredient> ingredients, String recet, int votes) {
-        this.image = image;
+    public Product( String image, String name, ArrayList<Ingredient> ingredients, String recet, int votes, int categories) {
         this.name = name;
         this.ingredients = ingredients;
         this.recet = recet;
         this.votes = votes;
+        this.image = image;
+        this.categories = categories;
     }
 
     public String getImage() {
@@ -66,6 +67,14 @@ public class Product {
 
     public int getId() {
         return name.hashCode();
+    }
+
+    public int getCategories() {
+        return categories;
+    }
+
+    public void setCategories(int categories) {
+        this.categories = categories;
     }
 }
 

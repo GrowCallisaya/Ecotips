@@ -52,12 +52,12 @@ public class ProductFragment extends Fragment {
         ingredients.add(new Ingredient("http://media3.onsugar.com/files/2013/05/20/835/n/1922729/b69113e292e68915_mango-kiwi-smoothie.preview.jpg","Otro","200%"));
         ingredients.add(new Ingredient("https://s-media-cache-ak0.pinimg.com/564x/a9/21/6d/a9216d0e6b816aeaf31ce02c05a18db0.jpg","Otro","200%"));
 
-        items.add(new Product("http://www.girlmakesfood.com/wp-content/uploads/2013/03/Healthy-Thin-Mint-Smoothie-1.jpg","Stevia Natural",ingredients,"100%",1));
-        items.add(new Product("http://frugalbeautiful.com/blog/wp-content/uploads/2012/01/the-smoothiesrecipeforhealthyfoods.jpg","Te de Soya",ingredients,"100%",3));
-        items.add(new Product("http://cdn-jpg.allyou.com/sites/default/files/image/2015/04/300x300/berry-smoothie-300.jpg","Smothie Paceño",ingredients,"100%",3));
-        items.add(new Product("http://media3.onsugar.com/files/2013/05/20/835/n/1922729/b69113e292e68915_mango-kiwi-smoothie.preview.jpg","Mate de Manzanilla",ingredients,"100%",3));
-        items.add(new Product("https://s-media-cache-ak0.pinimg.com/564x/a9/21/6d/a9216d0e6b816aeaf31ce02c05a18db0.jpg","Mantequilla organica",ingredients,"100%",1));
-        items.add(new Product("http://cdn6.dibujos.net/images/recetas/big/smoothie-de-pina-natural.jpg","Mascarilla de Coco",ingredients,"100%",3));
+        items.add(new Product("http://www.girlmakesfood.com/wp-content/uploads/2013/03/Healthy-Thin-Mint-Smoothie-1.jpg","Stevia Natural",ingredients,"100%",1,1));
+        items.add(new Product("http://frugalbeautiful.com/blog/wp-content/uploads/2012/01/the-smoothiesrecipeforhealthyfoods.jpg","Te de Soya",ingredients,"100%",3,1));
+        items.add(new Product("http://cdn-jpg.allyou.com/sites/default/files/image/2015/04/300x300/berry-smoothie-300.jpg","Smothie Paceño",ingredients,"100%",3,2));
+        items.add(new Product("http://media3.onsugar.com/files/2013/05/20/835/n/1922729/b69113e292e68915_mango-kiwi-smoothie.preview.jpg","Mate de Manzanilla",ingredients,"100%",3,3));
+        items.add(new Product("https://s-media-cache-ak0.pinimg.com/564x/a9/21/6d/a9216d0e6b816aeaf31ce02c05a18db0.jpg","Mantequilla organica",ingredients,"100%",1,3));
+        items.add(new Product("http://cdn6.dibujos.net/images/recetas/big/smoothie-de-pina-natural.jpg","Mascarilla de Coco",ingredients,"100%",3,4));
 
         usarGridView();
     }

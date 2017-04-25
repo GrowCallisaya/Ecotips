@@ -4,14 +4,17 @@
     android:layout_height="match_parent"
     tools:context="com.xiberty.ecotips.fragments.NoticeFragment">
 
-    <GridView
-        android:id="@+id/grid"
+    <cn.hugeterry.coordinatortablayout.CoordinatorTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinatortablayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnWidth="100dp"
-        android:horizontalSpacing="5dp"
-        android:verticalSpacing="5dp"
-        android:numColumns="auto_fit"
-        android:padding="0dp" />
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </cn.hugeterry.coordinatortablayout.CoordinatorTabLayout>
 
 </FrameLayout>
